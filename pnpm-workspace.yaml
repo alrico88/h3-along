@@ -2,6 +2,8 @@ catalog:
   vite: npm:@voidzero-dev/vite-plus-core@1.0.0
   vite-plus: 1.0.0
   vite@*: "catalog:"
+minimumReleaseAgeExclude:
+  - h3-between@0.1.0
 peerDependencyRules:
   allowAny:
     - vite
