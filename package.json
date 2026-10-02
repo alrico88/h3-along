@@ -1,0 +1,58 @@
+{
+  "name": "h3-along",
+  "version": "0.1.0",
+  "description": "Find H3 cells along GeoJSON LineString and MultiLineString geometries.",
+  "homepage": "https://github.com/alrico88/h3-along",
+  "license": "MIT",
+  "author": "Alberto Rico",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alrico88/h3-along.git"
+  },
+  "files": [
+    "dist",
+    "dist-cjs"
+  ],
+  "type": "module",
+  "main": "./dist-cjs/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "require": "./dist-cjs/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vp run build:esm && vp run build:cjs",
+    "build:esm": "vp pack --format esm --dts --clean --out-dir dist",
+    "build:cjs": "vp pack --format cjs --dts --clean --out-dir dist-cjs",
+    "dev": "vp pack --watch",
+    "test": "vp test",
+    "check": "vp check",
+    "prepublishOnly": "vp run build",
+    "prepare": "vp config"
+  },
+  "dependencies": {
+    "h3-between": "^0.1.0"
+  },
+  "devDependencies": {
+    "@types/geojson": "^7946.0.15",
+    "@types/node": "^26.1.1",
+    "bumpp": "^11.1.0",
+    "typescript": "^7.0.2",
+    "vite-plus": "catalog:"
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.7.0",
+      "onFail": "download"
+    }
+  }
+}
