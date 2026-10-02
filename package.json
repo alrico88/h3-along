@@ -1,6 +1,6 @@
 {
   "name": "h3-along",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find H3 cells along GeoJSON LineString and MultiLineString geometries.",
   "homepage": "https://github.com/alrico88/h3-along",
   "license": "MIT",
