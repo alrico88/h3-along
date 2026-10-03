@@ -39,11 +39,15 @@
     "prepare": "vp config"
   },
   "dependencies": {
-    "h3-between": "^0.1.0"
+    "@turf/boolean-intersects": "^7.4.0",
+    "@turf/helpers": "^7.4.0",
+    "@turf/line-intersect": "^7.4.0",
+    "h3-js": "^4.1.0"
   },
   "devDependencies": {
     "@types/geojson": "^7946.0.15",
     "@types/node": "^26.1.1",
+    "@vitest/coverage-v8": "5.0.1",
     "bumpp": "^11.1.0",
     "typescript": "^7.0.2",
     "vite-plus": "catalog:"

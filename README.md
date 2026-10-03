@@ -31,11 +31,18 @@ The package also exports `getH3CellsAlongLineString` and
 which cells are first encountered. H3 resolutions from `0` to `15` are
 supported.
 
+Segments are straight in longitude/latitude, not great-circle arcs. Longitude
+jumps greater than 180° cross the antimeridian by the shorter route. Cells that
+only touch an edge or vertex are included; simultaneous entries are sorted by
+H3 index.
+
 ## Development
 
 ```bash
 pnpm install
 vp test
+pnpm test -- --coverage
+
 vp check
 vp run build
 ```

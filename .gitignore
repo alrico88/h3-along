@@ -1,5 +1,9 @@
 node_modules
 dist
 dist-cjs
+coverage/
 *.log
 .DS_Store
+
+# PR Lens writes its previews here. They are rebuilt on demand.
+.pr-lens/
